@@ -8,19 +8,31 @@ import br.com.escola.modelo.Nota;
 public class TestaAluno {
 
 	public static void main(String[] args) {
-		Aluno a1 = new Aluno("Luis", 123);
+		Aluno aluno = new Aluno("Pedro", 123);
 		Aluno a2 = new Aluno("Pedro", 321);
 		
-		a1.adicionarNota(new Nota(7), new Nota(9), new Nota(8));
+		//a1.adicionarNota(new Nota(7), new Nota(9), new Nota(8));
 		
 		a2.adicionarNota(new Nota(9), new Nota(7), new Nota(8));
 		
-		System.out.println(a1);
+		Nota notaFisica = new Nota(9);
+		Nota notaMatematica = new Nota(10);
+		Nota notaQuimica = new Nota(8.5);
 		
-		List<Nota> notas = a1.getNotas();
-		notas.add(2, new Nota(10));
+		aluno.getNotas().add(notaFisica);
+		aluno.getNotas().add(notaMatematica);
+		aluno.getNotas().add(notaQuimica);
 		
-		System.out.println(notas);
+		System.out.println(aluno.getNotas().contains(notaFisica));
+		
+		System.out.println(aluno);
+		
+		Nota nota = aluno.getNotas().get(0);
+		System.out.println(nota);
+		
+		aluno.getNotas().remove(notaFisica);
+		System.out.println(aluno);
+		
 
 	}
 

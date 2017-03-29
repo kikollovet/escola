@@ -7,6 +7,10 @@ public class Materia {
 	public Materia(String nome){
 		this.nome = nome;
 	}
+	
+	public String getNome() {
+		return nome;
+	}
 
 	@Override
 	public int hashCode() {

@@ -1,6 +1,7 @@
 package br.com.escola.modelo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Aluno {
@@ -23,13 +24,21 @@ public class Aluno {
 	}
 	
 	public List<Nota> getNotas() {
-		return notas;
+		return Collections.unmodifiableList(this.notas);
+	}
+	
+	public void adicionaNota(Nota nota){
+		this.notas.add(nota);
 	}
 	
 	public void adicionarNota(Nota notaMatematica, Nota notaFisica, Nota notaQuimica){
 		this.notas.add(notaMatematica);
 		this.notas.add(notaFisica);
 		this.notas.add(notaQuimica);
+	}
+	
+	public void removeNota(int index){
+		this.notas.remove(index);
 	}
 	
 	public Nota getNotaEspecifica(int index){
