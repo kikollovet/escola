@@ -22,5 +22,7 @@ public class TestaAlunoMap {
 		aluno.adicionaNota(matematica, notaMatematica);
 		
 		System.out.println(aluno);
+		
+		System.out.println(aluno.getBoletim().get(matematica));
 	}
 }

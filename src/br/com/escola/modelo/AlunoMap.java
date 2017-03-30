@@ -1,5 +1,6 @@
 package br.com.escola.modelo;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,7 +24,7 @@ public class AlunoMap {
 	}
 
 	public Map<Materia, Nota> getBoletim() {
-		return boletim;
+		return Collections.unmodifiableMap(this.boletim);
 	}
 
 	public void adicionaNota(Materia materia, Nota nota) {

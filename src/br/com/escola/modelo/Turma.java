@@ -1,5 +1,6 @@
 package br.com.escola.modelo;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
@@ -11,10 +12,10 @@ public class Turma {
 	Set<Aluno> alunos = new HashSet<>();
 	
 	public Set<Aluno> getAlunos() {
-		return alunos;
+		return Collections.unmodifiableSet(this.alunos);
 	}
 	
-	public boolean adicionarAluno(Aluno aluno){
+	public boolean adicionaAluno(Aluno aluno){
 		return this.alunos.add(aluno);
 	}
 	

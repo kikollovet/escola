@@ -19,9 +19,9 @@ public class TestaAluno {
 		Nota notaMatematica = new Nota(10);
 		Nota notaQuimica = new Nota(8.5);
 		
-		aluno.getNotas().add(notaFisica);
-		aluno.getNotas().add(notaMatematica);
-		aluno.getNotas().add(notaQuimica);
+		aluno.adicionaNota(notaFisica);
+		aluno.adicionaNota(notaMatematica);
+		aluno.adicionaNota(notaQuimica);
 		
 		System.out.println(aluno.getNotas().contains(notaFisica));
 		
@@ -30,7 +30,7 @@ public class TestaAluno {
 		Nota nota = aluno.getNotas().get(0);
 		System.out.println(nota);
 		
-		aluno.getNotas().remove(notaFisica);
+		aluno.removeNota(0);
 		System.out.println(aluno);
 		
 
