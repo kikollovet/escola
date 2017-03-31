@@ -41,6 +41,10 @@ public class Aluno {
 		this.notas.remove(index);
 	}
 	
+	public void alteraNota(double nota, int index){
+		this.notas.get(index).setNota(nota);
+	}
+	
 	public Nota getNotaEspecifica(int index){
 		return this.notas.get(index);
 	}

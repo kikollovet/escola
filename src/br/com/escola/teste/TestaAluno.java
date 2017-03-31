@@ -31,6 +31,9 @@ public class TestaAluno {
 		System.out.println(nota);
 		
 		aluno.removeNota(0);
+		
+		aluno.alteraNota(8.5, 0);
+		
 		System.out.println(aluno);
 		
 

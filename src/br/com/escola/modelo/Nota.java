@@ -12,6 +12,10 @@ public class Nota {
 		return nota;
 	}
 	
+	public void setNota(double nota) {
+		this.nota = nota;
+	}
+	
 	@Override
 	public String toString() { 
 		return "Nota: " + nota;
