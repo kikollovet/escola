@@ -10,9 +10,13 @@ public class TestaArrayList {
 		ArrayList<String> lista = new ArrayList<>();
 		
 		String notaGeografia = "8,5";
-		
+		String meio = "meio";
+		String fim = "fim";
 		lista.add(notaGeografia);
+		lista.add(fim);
+		lista.add(1, meio);
 		//lista.add(lista);
+		
 		
 		System.out.println(lista);
 	}
